@@ -8,6 +8,7 @@
       "dependsOn": ["^build"],
       "env": [
         "DATABASE_URL",
+        "BETTER_AUTH_SECRET",
         "POSTGRES_URL",
         "OPENAI_API_KEY",
         "CLERK_SECRET_KEY",
