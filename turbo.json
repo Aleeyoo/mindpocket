@@ -17,3 +17,18 @@
     }
   }
 }
+
+{
+  "tasks": {
+    "build": {
+      "env": [
+        "DATABASE_URL*", 
+        "POSTGRES*", 
+        "NEON*", 
+        "OPENAI*", 
+        "CLERK*",
+        "PG*"
+      ]
+    }
+  }
+}
