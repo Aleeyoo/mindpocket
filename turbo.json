@@ -4,8 +4,21 @@
   "tasks": {
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "dependsOn": ["^build"]
+      "outputs": ["dist/", ".next/", "!.next/cache/**"],
+      "dependsOn": ["^build"],
+      "env": [
+        "DATABASE_URL",
+        "POSTGRES_URL",
+        "OPENAI_API_KEY",
+        "CLERK_SECRET_KEY",
+        "NEON_PROJECT_ID",
+        "DATABASE_URL_UNPOOLED",
+        "PGHOST",
+        "PGUSER",
+        "PGPASSWORD",
+        "PGDATABASE",
+        "OPENAI_API_BASE_URL"
+      ]
     },
     "dev": {
       "cache": false,
@@ -14,21 +27,6 @@
     "lint": {},
     "clean": {
       "cache": false
-    }
-  }
-}
-
-{
-  "tasks": {
-    "build": {
-      "env": [
-        "DATABASE_URL*", 
-        "POSTGRES*", 
-        "NEON*", 
-        "OPENAI*", 
-        "CLERK*",
-        "PG*"
-      ]
     }
   }
 }
